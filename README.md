@@ -1,7 +1,7 @@
 # The-Tortoise-and-the-Hare
 A puzzle game about the Tortoise and the Hare! Everyone knows that it comes from Aesop's fable. Now you can play as tortoises or hares and all of animals you played should reach the destination as fast as possible.
 <div align="center">
-<img src="docs/screenshot.png" alt="img" width="50%" />
+<img src="docs/Screenshot.png" alt="img" width="50%" />
 </div>
 
 ## How to Play
