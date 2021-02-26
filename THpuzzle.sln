@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THpuzzle", "THpuzzle\THpuzzle.csproj", "{3B8CEB26-3FAA-456C-957E-71EBEF0F24E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B8CEB26-3FAA-456C-957E-71EBEF0F24E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B8CEB26-3FAA-456C-957E-71EBEF0F24E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B8CEB26-3FAA-456C-957E-71EBEF0F24E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B8CEB26-3FAA-456C-957E-71EBEF0F24E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {678793D1-9F35-41F1-849D-3DA7D82ABBBD}
+	EndGlobalSection
+EndGlobal
