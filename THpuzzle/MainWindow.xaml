@@ -107,18 +107,18 @@
             <Image Name="Hr3" Style="{StaticResource HareImage}"  Grid.Column="0" Grid.Row="3" />
 
         </Grid>
-        <StackPanel Height="370" HorizontalAlignment="Left" Name="Controlpanel" VerticalAlignment="Top" Width="147" Margin="0,83,0,0">
-            <Button Content="開始遊戲" Name="button17" FontSize="24" Click="GameStart" Width="152" Height="50" BorderBrush="White" />
-            <TextBox Height="55" Name="textBox1" Width="150" Text="兔子" FontSize="24" TextAlignment="Center" VerticalContentAlignment="Center" BorderBrush="White" IsReadOnly="True" BorderThickness="0" Margin="0,0,-3.333,0" />
-            <Button  Content ="電腦控制" FontSize="24" Name="HareComputer" Width="150" Height="50" Click="HareComputer_Click" BorderBrush="White" />
-            <TextBox FontSize="24" Height="61" Name="textBox2" Text="烏龜" TextAlignment="Center" VerticalContentAlignment="Center" Width="150" BorderBrush="White" IsReadOnly="True" BorderThickness="0" Margin="0,0,-3.333,0" />
-            <Button  Content ="手動控制" FontSize="24" Name="TurtoiseComputer" Width="150" Height="50" Click="TurtoiseComputer_Click" BorderBrush="White" />
-            <TextBox BorderBrush="White" FontSize="24" Height="50" IsReadOnly="True" Name="textBox6" Text="搜索層數" TextAlignment="Center" VerticalContentAlignment="Center" Width="149" BorderThickness="0" />
-            <TextBox FontSize="24" Height="54" IsReadOnly="False" Name="textBox7" Text="16" TextAlignment="Center" VerticalContentAlignment="Center" TextChanged="textBox7_TextChanged" MaxLength="2" AcceptsReturn="True" Margin="0,0,-0.333,0" HorizontalAlignment="Left" Width="147" />
+        <StackPanel Height="370" HorizontalAlignment="Left" Name="Controlpanel" VerticalAlignment="Top" Width="190" Margin="0,83,0,0">
+            <Button Content="Start a game" Name="button17" FontSize="24" Click="GameStart" Height="50" BorderBrush="White" Margin="-2,0,-1,0" />
+            <TextBox Height="55" Name="textBox1" Text="Hare" FontSize="24" TextAlignment="Center" VerticalContentAlignment="Center" BorderBrush="White" IsReadOnly="True" BorderThickness="0" Margin="1,0,-2,0" />
+            <Button  Content ="Computer" FontSize="24" Name="HareComputer" Height="50" Click="HareComputer_Click" BorderBrush="White" Margin="-1,0,0,0" />
+            <TextBox FontSize="24" Height="61" Name="textBox2" Text="Tortoise" TextAlignment="Center" VerticalContentAlignment="Center" BorderBrush="White" IsReadOnly="True" BorderThickness="0" Margin="1,0,-2,0" />
+            <Button  Content ="Manual" FontSize="24" Name="TurtoiseComputer" Height="50" Click="TurtoiseComputer_Click" BorderBrush="White" Margin="-1,0,0,0" />
+            <TextBox BorderBrush="White" FontSize="24" Height="50" IsReadOnly="True" Name="textBox6" Text="Search Layers" TextAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" />
+            <TextBox FontSize="24" Height="54" IsReadOnly="False" Name="textBox7" Text="16" TextAlignment="Center" VerticalContentAlignment="Center" TextChanged="textBox7_TextChanged" MaxLength="2" AcceptsReturn="True" HorizontalAlignment="Left" Width="190" Background="#FFDDDDDD" />
         </StackPanel>
-        <StackPanel Height="109" HorizontalAlignment="Left" Margin="0,453,0,0" Name="Gamingpanel" VerticalAlignment="Top" Width="147">
-            <TextBox Text="輪到烏龜" Height="55" x:Name="Info" Width="146" IsReadOnly="True" BorderBrush="White" TextAlignment="Center" FontSize="24" VerticalContentAlignment="Center" Margin="0,0,0.667,0" />
-            <Button Content="跳過回合" FontSize="24" Height="55" x:Name="turnover" Width="145" Click="turnover_Click" Margin="1,0,0.667,0" />
+        <StackPanel Height="109" HorizontalAlignment="Left" Margin="0,453,0,0" Name="Gamingpanel" VerticalAlignment="Top" Width="190">
+            <TextBox Text="Tortoise's turn" Height="55" x:Name="Info" IsReadOnly="True" BorderBrush="White" TextAlignment="Center" FontSize="24" VerticalContentAlignment="Center" />
+            <Button Content="Skip your turn " FontSize="24" Height="55" x:Name="turnover" Click="turnover_Click" Margin="1,0,0,0" />
         </StackPanel>
     </Grid>
 </Window>

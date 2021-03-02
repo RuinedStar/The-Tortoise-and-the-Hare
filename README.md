@@ -11,6 +11,6 @@ A puzzle game about the Tortoise and the Hare! Everyone knows that it comes from
 4. The legal moves for tortoises are left, up and right. While a tortoise moves to topmost grids, you can move it to outside and reach to the destination.
 5. You can not jump more than one grid, and click skip button only if you are not able to move your animals.
 ## Plans and Schedules
-- [ ] Change Game UI to English (from Traditional Chinese)
+- [x] Change Game UI to English (from Traditional Chinese)
 - [ ] Add more friendly prompts
 - [ ] Add an option to adjust the difficulty 

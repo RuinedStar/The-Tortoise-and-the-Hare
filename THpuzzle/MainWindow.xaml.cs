@@ -20,7 +20,6 @@ namespace THpuzzle
         BackgroundWorker _bw;
         Tuple<int, int, int, int> result;
         DoubleAnimation _shining;
-
         public MainWindow()
         {
             TTHareRacing = new Game();
@@ -73,7 +72,7 @@ namespace THpuzzle
                     Grid.SetRow(selected, row);
                     ArriveDestination(selected);
 
-                    //下一步是否電腦操控
+                    //Check if next turn is a computer player
                     if (!IsGameOver()) _bw.RunWorkerAsync();
                 }
 
@@ -126,16 +125,16 @@ namespace THpuzzle
         {
             var s = sender as Button;
             TTHareRacing.HareIsComputer = !TTHareRacing.HareIsComputer;
-            if (TTHareRacing.HareIsComputer == true) s.Content = "電腦控制";
-            else s.Content = "手動控制";
+            if (TTHareRacing.HareIsComputer == true) s.Content = "Computer";
+            else s.Content = "Manual";
         }
 
         private void TurtoiseComputer_Click(object sender, RoutedEventArgs e)
         {
             var s = sender as Button;
             TTHareRacing.TurtoiseIsComputer = !TTHareRacing.TurtoiseIsComputer;
-            if (TTHareRacing.TurtoiseIsComputer == true) s.Content = "電腦控制";
-            else s.Content = "手動控制";
+            if (TTHareRacing.TurtoiseIsComputer == true) s.Content = "Computer";
+            else s.Content = "Manual";
         }
 
         private void textBox7_TextChanged(object sender, TextChangedEventArgs e)
@@ -166,8 +165,8 @@ namespace THpuzzle
             bool over = false;
             switch (s)
             {
-                case "turtoise": s = "烏龜獲勝!"; over = true; break;
-                case "hare": s = "兔子獲勝"; over = true; break;
+                case "turtoise": s = "Tortoises Win!"; over = true; break;
+                case "hare": s = "Hares Win"; over = true; break;
                 case null: break;
             }
 
@@ -185,8 +184,8 @@ namespace THpuzzle
         private void MAP_LayoutUpdated(object sender, EventArgs e)
         {
             string st = TTHareRacing.Turn;
-            if (st == "turtoise") Info.Text = "輪到烏龜";
-            else Info.Text = "輪到兔子";
+            if (st == "turtoise") Info.Text = "Tortoise's turn";
+            else Info.Text = "Hare's turn";
         }
     }
 }

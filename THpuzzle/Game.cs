@@ -75,9 +75,9 @@ namespace GameCore
         Piece[] _participant;
         List<int>[,] _TableList;
         int _Maxdepth;
-        KeyValuePair<int, int> _bestMove; // item1, id (-1代表不動) ; item2, dst 移動的位置
+        KeyValuePair<int, int> _bestMove; // item1, id ; item2, dst  if id is -1, represent no action at the turn
         int _turn;
-        bool[] _control;                  // false, 手動 ; true, 自動
+        bool[] _control;                  // false, manual ; true, computer
 
         public Game() 
         {
@@ -301,9 +301,9 @@ namespace GameCore
                         if (_map[dest].Status == MapKind.Space || _map[dest].Status == _participant[i].destKind) 
                         {
                             stuck = false;
-                            MovePiece(_participant[i], dest);     //移動走步
+                            MovePiece(_participant[i], dest);     //move
                             value = -ABPruing((turn ^ 1), depth - 1, -b, -a);
-                            MovePiece(_participant[i], oriLoc);         //還原走步
+                            MovePiece(_participant[i], oriLoc);   //revert
                             if (a < value)
                             {
                                 if (depth == _Maxdepth) _bestMove = new KeyValuePair<int, int>(i, dest);
