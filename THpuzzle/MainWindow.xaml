@@ -7,18 +7,14 @@
         mc:Ignorable="d"
         Title="The Tortoise and the Hare" Height="600" Width="800" ResizeMode="NoResize">
     <Grid Width="800" Height="600">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="41*"/>
-            <ColumnDefinition Width="39*"/>
-        </Grid.ColumnDefinitions>
-        <Image Height="571" HorizontalAlignment="Left" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="800" Source="images/background.jpg" Opacity="0.3" Grid.ColumnSpan="2" Margin="-10,0,0,0" />
-        <Grid  Name="MAP" Height="530" Width="530" LayoutUpdated="MAP_LayoutUpdated" Margin="219,-3,51,73" Grid.ColumnSpan="2">
+        <Image Height="571" HorizontalAlignment="Left" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="800" Source="images/background.jpg" Opacity="0.3" Margin="-10,0,0,0" />
+        <Grid  Name="MAP" LayoutUpdated="MAP_LayoutUpdated" Margin="219,-3,51,73">
             <Grid.Resources>
                 <Style x:Key = "hiddenButton" TargetType ="Button">
                     <Setter Property = "Opacity" Value="0"/>
                     <EventSetter Event="Click" Handler="button_Click"/>
                 </Style>
-
+                
                 <Style x:Key = "TurToiseImage" TargetType="Image">
                     <Setter Property = "Source" Value="images/tortoise.png"/>
                     <Setter Property = "Stretch" Value= "Fill"/>
@@ -78,30 +74,30 @@
             <Line Grid.Row="4" Style="{StaticResource horizontalLineStyle}" Grid.ColumnSpan="4"/>
 
 
-            <Button Name="TtDest1"  Style="{StaticResource hiddenButton}" Panel.ZIndex="1" IsEnabled="True" />
-            <Button Name="TtDest2" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="0" Panel.ZIndex="1" IsEnabled="True" />
-            <Button Name="TtDest3" Style="{StaticResource hiddenButton}" Grid.Column="2" Grid.Row="0" Panel.ZIndex="1" IsEnabled="True" />
-            <Button Name="TtDest4" Style="{StaticResource hiddenButton}" Grid.Column="3" Panel.ZIndex="1" IsEnabled="True" />
-            <Button Name="button1" Style="{StaticResource hiddenButton}"  Grid.Row="1" />
-            <Button Name="button2" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="1" />
-            <Button Name="button3" Style="{StaticResource hiddenButton}" Grid.Column="2" Grid.Row="1" />
-            <Button Name="button4" Style="{StaticResource hiddenButton}" Grid.Column="3" Grid.Row="1" />
-            <Button Name="button5" Style="{StaticResource hiddenButton}" Grid.Row="2" />
-            <Button  Name="button6" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="2" />
-            <Button  Name="button7" Style="{StaticResource hiddenButton}"  Grid.Column="2" Grid.Row="2" />
-            <Button  Name="button8" Style="{StaticResource hiddenButton}" Grid.Column="3" Grid.Row="2" />
-            <Button Name="button9" Style="{StaticResource hiddenButton}" Grid.Row="3" />
-            <Button  Name="button10" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="3" />
-            <Button  Name="button11" Style="{StaticResource hiddenButton}" Grid.Column="2" Grid.Row="3" />
-            <Button  Name="button12" Style="{StaticResource hiddenButton}" Grid.Column="3" Grid.Row="3" />
-            <Button Name="button13" Style="{StaticResource hiddenButton}" Grid.Row="4" />
-            <Button  Name="button14" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="4" />
-            <Button  Name="button15" Style="{StaticResource hiddenButton}" Grid.Column="2" Grid.Row="4" />
-            <Button  Name="button16" Style="{StaticResource hiddenButton}" Grid.Column="3" Grid.Row="4" />
-            <Button Name="HrDest1"  Style="{StaticResource hiddenButton}" Grid.Column="4" Grid.Row="1" Panel.ZIndex="1" />
-            <Button Name="HrDest2" Style="{StaticResource hiddenButton}" Grid.Column="4" Grid.Row="2" Panel.ZIndex="1" />
-            <Button Name="HrDest3" Style="{StaticResource hiddenButton}" Grid.Column="4" Grid.Row="3" Panel.ZIndex="1" />
-            <Button Name="HrDest4" Style="{StaticResource hiddenButton}" Grid.Column="4" Grid.Row="4" Panel.ZIndex="1" />
+            <Button Name="TtDest1" Style="{StaticResource hiddenButton}" Panel.ZIndex="1" IsEnabled="True" Background="#FFC67D7D" />
+            <Button Name="TtDest2" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="0" Panel.ZIndex="1" IsEnabled="True" Background="#FFC67D7D" />
+            <Button Name="TtDest3" Style="{StaticResource hiddenButton}" Grid.Column="2" Grid.Row="0" Panel.ZIndex="1" IsEnabled="True" Background="#FFC67D7D" />
+            <Button Name="TtDest4" Style="{StaticResource hiddenButton}" Grid.Column="3" Panel.ZIndex="1" IsEnabled="True" Background="#FFC67D7D" />
+            <Button Name="button1" Style="{StaticResource hiddenButton}"  Grid.Row="1" Background="#FFC67D7D" />
+            <Button Name="button2" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="1" Background="#FFC67D7D" />
+            <Button Name="button3" Style="{StaticResource hiddenButton}" Grid.Column="2" Grid.Row="1" Background="#FFC67D7D" />
+            <Button Name="button4" Style="{StaticResource hiddenButton}" Grid.Column="3" Grid.Row="1" Background="#FFC67D7D" />
+            <Button Name="button5" Style="{StaticResource hiddenButton}" Grid.Row="2" Background="#FFC67D7D" />
+            <Button Name="button6" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="2" Background="#FFC67D7D"  />
+            <Button Name="button7" Style="{StaticResource hiddenButton}"  Grid.Column="2" Grid.Row="2" Background="#FFC67D7D" />
+            <Button Name="button8" Style="{StaticResource hiddenButton}" Grid.Column="3" Grid.Row="2" Background="#FFC67D7D" />
+            <Button Name="button9" Style="{StaticResource hiddenButton}" Grid.Row="3" Background="#FFC67D7D" />
+            <Button Name="button10" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="3" Background="#FFC67D7D" />
+            <Button Name="button11" Style="{StaticResource hiddenButton}" Grid.Column="2" Grid.Row="3" Background="#FFC67D7D" />
+            <Button Name="button12" Style="{StaticResource hiddenButton}" Grid.Column="3" Grid.Row="3" Background="#FFC67D7D" />
+            <Button Name="button13" Style="{StaticResource hiddenButton}" Grid.Row="4" Background="#FFC67D7D" />
+            <Button Name="button14" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="4" Background="#FFC67D7D" />
+            <Button Name="button15" Style="{StaticResource hiddenButton}" Grid.Column="2" Grid.Row="4" Background="#FFC67D7D" />
+            <Button Name="button16" Style="{StaticResource hiddenButton}" Grid.Column="3" Grid.Row="4" Background="#FFC67D7D" />
+            <Button Name="HrDest1"  Style="{StaticResource hiddenButton}" Grid.Column="4" Grid.Row="1" Panel.ZIndex="1" Background="#FFC67D7D" />
+            <Button Name="HrDest2" Style="{StaticResource hiddenButton}" Grid.Column="4" Grid.Row="2" Panel.ZIndex="1" Background="#FFC67D7D" />
+            <Button Name="HrDest3" Style="{StaticResource hiddenButton}" Grid.Column="4" Grid.Row="3" Panel.ZIndex="1" Background="#FFC67D7D" />
+            <Button Name="HrDest4" Style="{StaticResource hiddenButton}" Grid.Column="4" Grid.Row="4" Panel.ZIndex="1" Background="#FFC67D7D" />
 
             <Image Name="Tt1" Style="{StaticResource TurToiseImage}" Grid.Column="1" Grid.Row="4"/>
             <Image Name="Tt2" Style="{StaticResource TurToiseImage}" Grid.Column="2" Grid.Row="4"/>

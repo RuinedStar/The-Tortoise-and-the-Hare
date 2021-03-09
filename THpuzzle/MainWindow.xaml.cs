@@ -1,5 +1,6 @@
 ﻿using GameCore;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows;
@@ -34,6 +35,35 @@ namespace THpuzzle
             Gamingpanel.IsEnabled = false;
         }
 
+        private void cleanPromptState()
+        {
+            if (selected == null)
+                return;
+            foreach (UIElement item in MAP.Children.OfType<Button>())
+            {
+                item.Opacity = 0.0;
+            }
+        }
+        private void setPromptState()
+        {
+            if (selected == null)
+                return;
+            int col = Grid.GetColumn(selected);
+            int row = Grid.GetRow(selected);
+            var o = MAP.Children.OfType<Button>().First(x => Grid.GetColumn(x) == col && Grid.GetRow(x) == row);
+            o.Opacity = 100.0;
+            foreach (int step in TTHareRacing.getPissibleTable(col, row))
+            {
+                if (TTHareRacing.Map[step].isSpace())
+                {
+                    int scol = step % 5;
+                    int srow = step / 5;
+                    var b = MAP.Children.OfType<Button>().First(x => Grid.GetColumn(x) == scol && Grid.GetRow(x) == srow);
+                    b.Opacity = 100.0;
+                }
+            }
+        }
+
         private void image_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Image img = sender as Image;
@@ -44,7 +74,9 @@ namespace THpuzzle
 
             if (TTHareRacing.InteractionAvailable(col, row))
             {
+                if (selected != null) cleanPromptState();
                 selected = img;
+                setPromptState();
                 Console.WriteLine("select Image {0}", selected.Name);
             }
             else
@@ -75,7 +107,8 @@ namespace THpuzzle
                     //Check if next turn is a computer player
                     if (!IsGameOver()) _bw.RunWorkerAsync();
                 }
-
+                
+                cleanPromptState();
                 selected = null;
             }
             else

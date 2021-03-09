@@ -17,8 +17,11 @@ namespace GameCore
             public MapKind Status { get { return status; } }
           
             public MapUnit(MapKind kind) { status = kind; }
-            public void BeOccupied() { if( status == MapKind.Space ) status = MapKind.Occupy; }
-            public void BeSpaced() { if ( status == MapKind.Occupy ) status = MapKind.Space; }
+            public bool isSpace() { if (status == MapKind.Space) return true; else return false; }
+
+            public void beOccupied() { if( status == MapKind.Space ) status = MapKind.Occupy; }
+
+            public void beSpaced() { if ( status == MapKind.Occupy ) status = MapKind.Space; }
         }
 
         class Piece
@@ -44,10 +47,10 @@ namespace GameCore
             public void TestArrival(MapKind status) { arrive = ( (status == dest) ? true : false ); }
         }
 
-        public class PropertyCollection<T>
+        public class MapProperty<T>
         {
             private T[] arr;
-            public PropertyCollection(T[] t)
+            public MapProperty(T[] t)
             {
                 arr = t;
             }
@@ -57,16 +60,27 @@ namespace GameCore
                 get { return arr[col + row * 5]; }
                 private set { arr[col + row * 5] = value; }
             }
+            public T this[int index]
+            {
+                get { return arr[index]; }
+                private set { arr[index] = value; }
+            }
         }
 
-       /// <Property>
-       /// 
-       /// </summary>
-       public int Depth { get { return _Maxdepth; } set { _Maxdepth = value; } }
-       public bool TurtoiseIsComputer { get { return _control[0]; } set { _control[0] = value; } }
-       public bool HareIsComputer { get { return _control[1]; } set { _control[1] = value; } }
-       public string Turn { get { return (_turn == 0) ?  "turtoise" : "hare"; } }
-       public PropertyCollection<MapUnit> Map;
+        /// <Property>
+        /// 
+        /// </summary>
+        public int Depth { get { return _Maxdepth; } set { _Maxdepth = value; } }
+        public bool TurtoiseIsComputer { get { return _control[0]; } set { _control[0] = value; } }
+        public bool HareIsComputer { get { return _control[1]; } set { _control[1] = value; } }
+        public string Turn { get { return (_turn == 0) ?  "turtoise" : "hare"; } }
+        public MapProperty<MapUnit> Map;
+
+        public IList<int> getPissibleTable(int col, int row)
+        {
+            int index = col + row * 5;
+            return _TableList[_turn, index].AsReadOnly();
+        }
 
         /// <Private data>
         /// 
@@ -115,7 +129,7 @@ namespace GameCore
             _Maxdepth = 16;
             _turn = 0;
             _control = new bool[2] { false,true };
-            Map = new PropertyCollection<MapUnit>(_map);
+            Map = new MapProperty<MapUnit>(_map);
 
             _TableList = new List<int>[2, 25];
 
@@ -243,8 +257,8 @@ namespace GameCore
 
         bool MovePiece(Piece p, int dst) 
         {
-            _map[p.Location].BeSpaced();
-            _map[dst].BeOccupied();
+            _map[p.Location].beSpaced();
+            _map[dst].beOccupied();
             p.Location = dst;
             p.TestArrival(_map[p.Location].Status);
             return true;

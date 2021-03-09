@@ -17,5 +17,5 @@ The core algorithm I designed for the game is Alpha-beta Pruning.
 5. You can not jump more than one grid, and click skip button only if you are not able to move your animals.
 ## Plans and Schedules
 - [x] Change Game UI to English (from Traditional Chinese)
-- [ ] Add more friendly prompts
+- [x] Add more friendly prompts: move prompts
 - [ ] Add an option to adjust the difficulty 
