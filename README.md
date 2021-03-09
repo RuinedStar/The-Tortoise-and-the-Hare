@@ -5,7 +5,7 @@ A puzzle game about the Tortoise and the Hare! Everyone knows that it comes from
 </div>
 
 ## Motivation
-It was a project competition in Artificial Intelligence course from NTNU. Your chess AI is limited to a specific time(< 3 seconds) to response in the competition.
+It was a project competition in Artificial Intelligence course 2013 from NTNU. Your chess AI is limited to a specific time(< 3 seconds) to response in the competition.
 
 The core algorithm I design for the game is Alpha-Beta Pruning.
 
@@ -18,4 +18,4 @@ The core algorithm I design for the game is Alpha-Beta Pruning.
 ## Plans and Schedules
 - [x] Change Game UI to English (from Traditional Chinese)
 - [x] Add more friendly prompts: move prompts
-- [ ] Add an option to adjust the difficulty 
+- [x] Add an option to adjust the difficulty 

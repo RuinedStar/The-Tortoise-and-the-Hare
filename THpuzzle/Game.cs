@@ -17,7 +17,7 @@ namespace GameCore
             public MapKind Status { get { return status; } }
           
             public MapUnit(MapKind kind) { status = kind; }
-            public bool isSpace() { if (status == MapKind.Space) return true; else return false; }
+            public bool isSpace() { if (status != MapKind.Occupy) return true; else return false; }
 
             public void beOccupied() { if( status == MapKind.Space ) status = MapKind.Occupy; }
 

@@ -34,12 +34,6 @@ namespace THpuzzle
             MAP.IsEnabled = false;
             Gamingpanel.IsEnabled = false;
 
-            if(Difficulty.SelectedIndex == 0) //Easy
-                TTHareRacing.Depth = 12;
-            else if (Difficulty.SelectedIndex == 2) //Crazy
-                TTHareRacing.Depth = 19;
-            else  //Default, Normal
-                TTHareRacing.Depth = 15;
         }
 
         private void cleanPromptState()
@@ -154,6 +148,13 @@ namespace THpuzzle
 
         private void GameStart(object sender, RoutedEventArgs e)
         {
+            if (Difficulty.SelectedIndex == 0) //Easy
+                TTHareRacing.Depth = 12;
+            else if (Difficulty.SelectedIndex == 2) //Crazy
+                TTHareRacing.Depth = 19;
+            else  //Default, Normal
+                TTHareRacing.Depth = 14;
+
             Controlpanel.IsEnabled = false;
             _bw.CancelAsync();
             _bw.RunWorkerAsync();
@@ -197,13 +198,13 @@ namespace THpuzzle
             switch (s)
             {
                 case "turtoise": s = "Tortoises Win!"; over = true; break;
-                case "hare": s = "Hares Win"; over = true; break;
+                case "hare": s = "Hares Win!"; over = true; break;
                 case null: break;
             }
 
             if (over)
             {
-                MessageBox.Show(s);
+                MessageBox.Show(s, "Congratulations");
                 MAP.IsEnabled = false;
                 Controlpanel.IsEnabled = false;
                 Gamingpanel.IsEnabled = false;
