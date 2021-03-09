@@ -5,9 +5,9 @@ A puzzle game about the Tortoise and the Hare! Everyone knows that it comes from
 </div>
 
 ## Motivation
-It was a project competition in Artificial Intelligence course from NTNU. Your chress AI is limited to a specific time(< 3 seconds) to response in the competition.
+It was a project competition in Artificial Intelligence course from NTNU. Your chess AI is limited to a specific time(< 3 seconds) to response in the competition.
 
-The core algorithm I designed for the game is Alpha-beta Pruning.
+The core algorithm I design for the game is Alpha-Beta Pruning.
 
 ## How to Play
 1. Tortoises move first, and hares move next, the sequence is reapted until the game is over.
