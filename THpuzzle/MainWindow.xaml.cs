@@ -33,6 +33,13 @@ namespace THpuzzle
             selected = null;
             MAP.IsEnabled = false;
             Gamingpanel.IsEnabled = false;
+
+            if(Difficulty.SelectedIndex == 0) //Easy
+                TTHareRacing.Depth = 12;
+            else if (Difficulty.SelectedIndex == 2) //Crazy
+                TTHareRacing.Depth = 19;
+            else  //Default, Normal
+                TTHareRacing.Depth = 15;
         }
 
         private void cleanPromptState()
@@ -168,15 +175,6 @@ namespace THpuzzle
             TTHareRacing.TurtoiseIsComputer = !TTHareRacing.TurtoiseIsComputer;
             if (TTHareRacing.TurtoiseIsComputer == true) s.Content = "Computer";
             else s.Content = "Manual";
-        }
-
-        private void textBox7_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            var s = sender as TextBox;
-            int depth;
-            Int32.TryParse(s.Text, out depth);
-            TTHareRacing.Depth = depth;
-            Console.WriteLine(TTHareRacing.Depth);
         }
 
         private void turnover_Click(object sender, RoutedEventArgs e)

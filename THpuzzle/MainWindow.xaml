@@ -12,6 +12,7 @@
             <Grid.Resources>
                 <Style x:Key = "hiddenButton" TargetType ="Button">
                     <Setter Property = "Opacity" Value="0"/>
+                    <Setter Property = "Background" Value="#FFC67D7D" />
                     <EventSetter Event="Click" Handler="button_Click"/>
                 </Style>
                 
@@ -74,30 +75,30 @@
             <Line Grid.Row="4" Style="{StaticResource horizontalLineStyle}" Grid.ColumnSpan="4"/>
 
 
-            <Button Name="TtDest1" Style="{StaticResource hiddenButton}" Panel.ZIndex="1" IsEnabled="True" Background="#FFC67D7D" />
-            <Button Name="TtDest2" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="0" Panel.ZIndex="1" IsEnabled="True" Background="#FFC67D7D" />
-            <Button Name="TtDest3" Style="{StaticResource hiddenButton}" Grid.Column="2" Grid.Row="0" Panel.ZIndex="1" IsEnabled="True" Background="#FFC67D7D" />
-            <Button Name="TtDest4" Style="{StaticResource hiddenButton}" Grid.Column="3" Panel.ZIndex="1" IsEnabled="True" Background="#FFC67D7D" />
-            <Button Name="button1" Style="{StaticResource hiddenButton}"  Grid.Row="1" Background="#FFC67D7D" />
-            <Button Name="button2" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="1" Background="#FFC67D7D" />
-            <Button Name="button3" Style="{StaticResource hiddenButton}" Grid.Column="2" Grid.Row="1" Background="#FFC67D7D" />
-            <Button Name="button4" Style="{StaticResource hiddenButton}" Grid.Column="3" Grid.Row="1" Background="#FFC67D7D" />
-            <Button Name="button5" Style="{StaticResource hiddenButton}" Grid.Row="2" Background="#FFC67D7D" />
-            <Button Name="button6" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="2" Background="#FFC67D7D"  />
-            <Button Name="button7" Style="{StaticResource hiddenButton}"  Grid.Column="2" Grid.Row="2" Background="#FFC67D7D" />
-            <Button Name="button8" Style="{StaticResource hiddenButton}" Grid.Column="3" Grid.Row="2" Background="#FFC67D7D" />
-            <Button Name="button9" Style="{StaticResource hiddenButton}" Grid.Row="3" Background="#FFC67D7D" />
-            <Button Name="button10" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="3" Background="#FFC67D7D" />
-            <Button Name="button11" Style="{StaticResource hiddenButton}" Grid.Column="2" Grid.Row="3" Background="#FFC67D7D" />
-            <Button Name="button12" Style="{StaticResource hiddenButton}" Grid.Column="3" Grid.Row="3" Background="#FFC67D7D" />
-            <Button Name="button13" Style="{StaticResource hiddenButton}" Grid.Row="4" Background="#FFC67D7D" />
-            <Button Name="button14" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="4" Background="#FFC67D7D" />
-            <Button Name="button15" Style="{StaticResource hiddenButton}" Grid.Column="2" Grid.Row="4" Background="#FFC67D7D" />
-            <Button Name="button16" Style="{StaticResource hiddenButton}" Grid.Column="3" Grid.Row="4" Background="#FFC67D7D" />
-            <Button Name="HrDest1"  Style="{StaticResource hiddenButton}" Grid.Column="4" Grid.Row="1" Panel.ZIndex="1" Background="#FFC67D7D" />
-            <Button Name="HrDest2" Style="{StaticResource hiddenButton}" Grid.Column="4" Grid.Row="2" Panel.ZIndex="1" Background="#FFC67D7D" />
-            <Button Name="HrDest3" Style="{StaticResource hiddenButton}" Grid.Column="4" Grid.Row="3" Panel.ZIndex="1" Background="#FFC67D7D" />
-            <Button Name="HrDest4" Style="{StaticResource hiddenButton}" Grid.Column="4" Grid.Row="4" Panel.ZIndex="1" Background="#FFC67D7D" />
+            <Button Name="TtDest1" Style="{StaticResource hiddenButton}" Grid.Column="0" Grid.Row="0" Panel.ZIndex="1" IsEnabled="True" />
+            <Button Name="TtDest2" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="0" Panel.ZIndex="1" IsEnabled="True" />
+            <Button Name="TtDest3" Style="{StaticResource hiddenButton}" Grid.Column="2" Grid.Row="0" Panel.ZIndex="1" IsEnabled="True" />
+            <Button Name="TtDest4" Style="{StaticResource hiddenButton}" Grid.Column="3" Grid.Row="0" Panel.ZIndex="1" IsEnabled="True" />
+            <Button Name="button1" Style="{StaticResource hiddenButton}" Grid.Row="1" />
+            <Button Name="button2" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="1" />
+            <Button Name="button3" Style="{StaticResource hiddenButton}" Grid.Column="2" Grid.Row="1" />
+            <Button Name="button4" Style="{StaticResource hiddenButton}" Grid.Column="3" Grid.Row="1" />
+            <Button Name="button5" Style="{StaticResource hiddenButton}" Grid.Row="2" />
+            <Button Name="button6" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="2"  />
+            <Button Name="button7" Style="{StaticResource hiddenButton}" Grid.Column="2" Grid.Row="2" />
+            <Button Name="button8" Style="{StaticResource hiddenButton}" Grid.Column="3" Grid.Row="2" />
+            <Button Name="button9" Style="{StaticResource hiddenButton}" Grid.Row="3" />
+            <Button Name="button10" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="3" />
+            <Button Name="button11" Style="{StaticResource hiddenButton}" Grid.Column="2" Grid.Row="3" />
+            <Button Name="button12" Style="{StaticResource hiddenButton}" Grid.Column="3" Grid.Row="3" />
+            <Button Name="button13" Style="{StaticResource hiddenButton}" Grid.Row="4" />
+            <Button Name="button14" Style="{StaticResource hiddenButton}" Grid.Column="1" Grid.Row="4" />
+            <Button Name="button15" Style="{StaticResource hiddenButton}" Grid.Column="2" Grid.Row="4" />
+            <Button Name="button16" Style="{StaticResource hiddenButton}" Grid.Column="3" Grid.Row="4" />
+            <Button Name="HrDest1" Style="{StaticResource hiddenButton}" Grid.Column="4" Grid.Row="1" Panel.ZIndex="1" />
+            <Button Name="HrDest2" Style="{StaticResource hiddenButton}" Grid.Column="4" Grid.Row="2" Panel.ZIndex="1" />
+            <Button Name="HrDest3" Style="{StaticResource hiddenButton}" Grid.Column="4" Grid.Row="3" Panel.ZIndex="1" />
+            <Button Name="HrDest4" Style="{StaticResource hiddenButton}" Grid.Column="4" Grid.Row="4" Panel.ZIndex="1" />
 
             <Image Name="Tt1" Style="{StaticResource TurToiseImage}" Grid.Column="1" Grid.Row="4"/>
             <Image Name="Tt2" Style="{StaticResource TurToiseImage}" Grid.Column="2" Grid.Row="4"/>
@@ -113,12 +114,16 @@
             <Button  Content ="Computer" FontSize="24" Name="HareComputer" Height="50" Click="HareComputer_Click" BorderBrush="White" Margin="-1,0,0,0" />
             <TextBox FontSize="24" Height="61" Name="textBox2" Text="Tortoise" TextAlignment="Center" VerticalContentAlignment="Center" BorderBrush="White" IsReadOnly="True" BorderThickness="0" Margin="1,0,-2,0" />
             <Button  Content ="Manual" FontSize="24" Name="TurtoiseComputer" Height="50" Click="TurtoiseComputer_Click" BorderBrush="White" Margin="-1,0,0,0" />
-            <TextBox BorderBrush="White" FontSize="24" Height="50" IsReadOnly="True" Name="textBox6" Text="Search Layers" TextAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" />
-            <TextBox FontSize="24" Height="54" IsReadOnly="False" Name="textBox7" Text="16" TextAlignment="Center" VerticalContentAlignment="Center" TextChanged="textBox7_TextChanged" MaxLength="2" AcceptsReturn="True" HorizontalAlignment="Left" Width="190" Background="#FFDDDDDD" />
+            <TextBox BorderBrush="White" FontSize="24" Height="50" IsReadOnly="True" Name="textBox6" Text="Difficulty" TextAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" />
+            <ComboBox Name="Difficulty" Height="55" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                <ComboBoxItem>Easy</ComboBoxItem>
+                <ComboBoxItem IsSelected="True">Normal</ComboBoxItem>
+                <ComboBoxItem>Crazy</ComboBoxItem>
+            </ComboBox>
         </StackPanel>
         <StackPanel Height="109" HorizontalAlignment="Left" Margin="0,418,0,0" Name="Gamingpanel" VerticalAlignment="Top" Width="190">
             <TextBox Text="Tortoise's turn" Height="55" x:Name="Info" IsReadOnly="True" BorderBrush="White" TextAlignment="Center" FontSize="24" VerticalContentAlignment="Center" />
-            <Button Content="Skip your turn " FontSize="24" Height="55" x:Name="turnover" Click="turnover_Click" />
+            <Button Content="Skip" FontSize="24" Height="55" x:Name="turnover" Click="turnover_Click" />
         </StackPanel>
     </Grid>
 </Window>
